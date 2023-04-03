@@ -10,8 +10,8 @@ jobs:
           name: "Create CloudFormation Stack"
           command: |
             aws cloudformation deploy \
-            --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \  
             --template-file template.yml \
+            --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \  
             --parameters file://template-parameters.json \
             --region us-east-1
 
